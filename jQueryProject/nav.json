@@ -1,0 +1,43 @@
+[
+    {
+        "bra0": "苹果",
+        "bra1": "苹果iPhone 6s",
+        "bra2": "苹果iPhone 6s Plus",
+        "bra3": "苹果iPhone 6",
+        "bra4": "苹果iPhone 6 Plus"
+    },
+    {
+        "bra0": "三星",
+        "bra1": "三星 Galaxy S7",
+        "bra2": "三星 Galaxy S7 edge",
+        "bra3": "三星 Galaxy S6"
+    },
+    {
+        "bra0": "小米",
+        "bra1": "小米Max",
+        "bra2": "小米手机5",
+        "bra3": "小米手机4S",
+        "bra4": "小米手机4c",
+        "bra5": "小米Note"
+    },
+    {
+        "bra0": "华为",
+        "bra1": "华为Mate 8",
+        "bra2": "华为Mate 7",
+        "bra3": "华为Mate s",
+        "bra4": "华为荣耀 7i"
+    },
+    {
+        "bra0": "魅族",
+        "bra1": "魅族MX6",
+        "bra2": "魅族MX5e",
+        "bra3": "魅族MX4",
+        "bra4": "魅族MX4 Pro"
+    },
+    {
+        "bra0": "锤子",
+        "bra1": "坚果手机",
+        "bra2": "Smartisan T2",
+        "bra3": "Smartisan T1"
+    }
+]

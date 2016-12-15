@@ -1,0 +1,40 @@
+[
+    {
+        "bra0": "苹果",
+        "bra1": "苹果 16年 12寸 MacBook",
+        "bra2": "苹果 15年 13寸 MacBook Air"
+    },
+    {
+        "bra0": "联想",
+        "bra1": "联想ThinkPad E40",
+        "bra2": "联想ThinkPad E430c",
+        "bra3": "联想ThinkPad E420"
+    },
+    {
+        "bra0": "华硕",
+        "bra1": "华硕 飞行堡垒FX50",
+        "bra2": "华硕A43",
+        "bra3": "华硕 X550 系列",
+        "bra4": "华硕 X42J"
+    },
+    {
+        "bra0": "联想",
+        "bra1": "联想 拯救者 14寸 系列",
+        "bra2": "联想Y470",
+        "bra3": "联想G470",
+        "bra4": "联想 IdeaPad 700S"
+    },
+    {
+        "bra0": "宏基",
+        "bra1": "Acer VN7-591G 系列",
+        "bra2": "Acer S3-391",
+        "bra3": "Acer V5-471G",
+        "bra4": "Acer V5-573G"
+    },
+    {
+        "bra0": "戴尔",
+        "bra1": "戴尔 XPS 12 9350 系列",
+        "bra2": "戴尔Inspiron 灵越 15R",
+        "bra3": "戴尔 Inspiron 15-7559"
+    }
+]

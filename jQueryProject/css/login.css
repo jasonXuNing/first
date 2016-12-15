@@ -1,0 +1,41 @@
+body,ul,li,dl,dt,dd,p,ol,h1,h2,h3,h4,h5,h6,form,img,table,fieldset,legend{margin:0; padding:0;}
+ul,li,ol{list-style:none;}
+img,fieldset{border:0; }
+img{display:block;}
+a{text-decoration:none; color:#333;}
+h1,h2,h3,h4,h5,h6{font-weight:100;}
+body{font-size:12px; font-family:"微软雅黑";}
+input,a{outline:none;border: 0;}
+
+
+body{background: #f8f8f8;}
+#log-con{width: 320px; height: 395px; margin: 185px auto;background: #fff;padding: 40px 220px 0;}
+#log-logo{width: 170px; height: 98px; background: url(../img/log-logo.jpg) no-repeat;margin-left: 75px;}
+#head{width: 320px; height: 22px;}
+#head .hd-left{color: #333; font-size: 20px; float: left;line-height: 22px;}
+#head .hd-right{font-size: 12px; line-height: 22px;float: right;}
+#head .hd-right a{color: #8e8e8e;}
+#fm{height: 204px; width: 320px; padding-top: 30px;display: block;}
+input{width: 283px;height: 38px; border: 1px solid #e5e5e5;padding-left: 35px;margin-bottom: 20px;font-size: 16px; color: #333;}
+#login{cursor: pointer; display: block;width: 320px; height: 40px; margin-top: 10px;background: #fcdb00; border-radius: 2px;line-height: 40px; font-size: 18px; text-align: center; color: #333;}
+#phone{background: url(../img/phone1.jpg) no-repeat 10px 10px;}
+#pass{background: url(../img/pass.jpg) no-repeat 10px 10px;}
+#keep-log{float:left; width: 17px; height: 17px; background: url(../img/no-checked.jpg) no-repeat; cursor: pointer;}
+.keep-txt{float: left; height: 17px; color: #8e8e8e; margin-left: 6px;line-height: 17px;}
+#log-bot{height:17px; width: 320px;margin-top: 6px;position: relative;}
+#foget{color: #3782ff; font-size: 12px;position: absolute; right: 0; top: 0;}
+#fm2{height: 204px; width: 320px; padding-top: 30px;display: none;}
+#phone2{width: 155px; background: url(../img/phone1.jpg) no-repeat 10px 10px;float: left;}
+#span{cursor: pointer; width: 110px; margin-left: 10px; height: 40px; background: #e5e5e5; color: #757575;float: left;text-align: center;line-height: 40px;}
+#pass2{background: url(../img/pass.jpg) no-repeat 10px 10px;}
+#login2{cursor: pointer; display: block; width: 320px; height: 40px; margin-top: 10px;background: #fcdb00; border-radius: 2px;line-height: 40px; font-size: 18px; text-align: center; color: #333;}
+#txt{margin: 5px 0;color: #666;}
+
+.tishi{color: red; display: none;}
+
+
+
+
+
+
+

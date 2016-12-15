@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商品列表页</title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/iphone.css" />
+		<script type="text/javascript" src="js/jquery-1.7.1.js" ></script>
+		<script>
+			$(function(){
+				$(".morebra").toggle(function(){
+					$(".cantsee").css("display", "block");
+					$(this).html("<a class='morebra' href='#'>收起<i></i></a>").find("i").css("background-position-x","-193px");
+				},function(){
+					$(".cantsee").css("display", "none");
+					$(this).html("<a class='morebra' href='#'>更多<i></i></a>").find("i").css("background-position-x","-178px");
+				})
+				$(".morephone").toggle(function(){
+					$(".hot-cant").css("display", "block");
+					$(this).html("<a class='morephone' href='#'>收起<i></i></a>").find("i").css("background-position-x","-193px");
+				},function(){
+					$(".hot-cant").css("display", "none");
+					$(this).html("<a class='morephone' href='#'>更多<i></i></a>").find("i").css("background-position-x","-178px");
+				})
+				
+				$(".reduce-left").find("ul").find("li").click(function(){
+					$(".reduce-left").find("ul").find("li").attr("class","");
+					$(this).attr("class", "blue");
+				})
+				
+				$.ajax({
+					type:"get",
+					url:"brand.json",
+					success: function(res){
+						var html = '';
+						for(var i = 0; i < res.length; i++){
+							html += '<li><img src="'+ res[i].img +'" /><div class="li-bot">'+ res[i].name +'</div></li>'
+						}
+						$("#iphonelist").html(html);
+						$("#iphonelist li:first").click(function(){
+							open("iphone.html");
+						})
+					}
+				});
+				//alert($("#iphonelist li:first"));
+				
+			})
+			
+//			onload = function(){
+//				var btn = document.getElementsByClassName("iphonelist")[0];
+//				alert(btn.firstChild.innerHTML)
+//				btn.firstChild.onclick = function(){
+//					window.open("iphone.html");
+//				}
+//			}
+		</script>
+	</head>
+	<body style="background: #fff;">
+		<div class="top">
+			<div id="top">
+				<h1><a href="#"><img src="img/log-logo.jpg" alt="爱回收" /></a></h1>
+				<a href="#">旧机回收</a>
+				<a href="#">口袋优品</a>
+				<a href="#">手机快修</a>
+				<div class="search">
+					<input type="text" placeholder="请输入手机型号" class="typeofphone" />
+					<a href="#" class="asearch"></a>
+				</div>
+			</div>
+		</div>
+		<div class="reduce">
+			<p><a href="#">首页 </a>><a href="#">二手回收产品 </a>> 手机回收</p>
+		</div>
+		<div class="list_con">
+			<div class="reduce-left">
+				<ul>
+					<li id="fir" style="font-size: 16px; background: #fafafa; font-weight: 900; color:#333;">全部回收产品</li>
+					<li class="blue">手机</li>
+					<li>平板电脑</li>
+					<li>笔记本</li>
+					<li>摄影摄像</li>
+					<li>智能数码</li>
+					<li>家用电器</li>
+				</ul>
+				<div class="checkphone"></div>
+			</div>
+			<div class="reduce-right">
+				<div class="brand">
+					<div class="phonebrand">
+						<p class="brand-title">品牌：</p>
+						<ul class="brand-list">
+							<li><img src="img/52.png" /></li>
+							<li><img src="img/7.png" /></li>
+							<li><img src="img/184.png" /></li>
+							<li><img src="img/9.png" /></li>
+							<li><img src="img/24.png" /></li>
+							<li><img src="img/356.png" /></li>
+							<li><img src="img/4.png" /></li>
+							<li><img src="img/16.png" /></li>
+							<li><img src="img/278.png" /></li>
+							<li><img src="img/365.png" /></li>
+							<li><img src="img/17.png" /></li>
+							<li><img src="img/19.png" /></li>
+							<li><img src="img/1.png" /></li>
+							<li><img src="img/3.png" /></li>
+							<li class="cantsee"><img src="img/18.png" /></li>
+							<li class="cantsee"><img src="img/342.png" /></li>
+							<li class="cantsee"><img src="img/25.png" /></li>
+							<li class="cantsee"><img src="img/357.png" /></li>
+							<li class="cantsee"><img src="img/8.png" /></li>
+							<li class="cantsee"><img src="img/21.png" /></li>
+							<li class="cantsee"><img src="img/14.png" /></li>
+							<li class="cantsee"><img src="img/103.png" /></li>
+							<li class="cantsee"><img src="img/20.png" /></li>
+							<li class="cantsee"><img src="img/15.png" /></li>
+							<li class="cantsee"><img src="img/12.png" /></li>
+							<li class="cantsee"><img src="img/10.png" /></li>
+							<li class="cantsee"><img src="img/11.png" /></li>
+							<li class="cantsee"><img src="img/358.png" /></li>
+							<li class="cantsee"><img src="img/51.png" /></li>
+							<li class="cantsee"><img src="img/391.png" /></li>
+							<li class="cantsee"><img src="img/458.png.jpg" /></li>
+							<li class="cantsee" style="color: #666; text-align: center;">360手机回收</li>
+							<li class="cantsee" style="color: #3782ff; line-height: 85px; text-align: center;">其他品牌</li>
+						</ul>
+						<a class="morebra" href="#">更多<i></i></a>
+					</div>
+					<div class="hot">
+						<p class="hot-title">热门：</p>
+						<ul class="hotphone">
+							<li>苹果 iPhone 7</li>
+							<li>苹果 iPhone 7 Plus</li>
+							<li>苹果 iPhone SE</li>
+							<li>苹果 iPhone 6S Plus</li>
+							<li>苹果 iPhone 6S</li>
+							<li>苹果 iPhone 6 Plus</li>
+							<li>苹果 iPhone 6</li>
+							<li>苹果 iPhone 5S</li>
+							<li class="hot-cant">苹果 iPhone 5C</li>
+							<li class="hot-cant">苹果 iPhone 5</li>
+							<li class="hot-cant">苹果 iPhone 4S</li>
+							<li class="hot-cant">苹果 iPhone 4</li>
+							<li class="hot-cant">苹果 iPhone 3GS</li>
+							<li class="hot-cant">苹果 iPhone 3G</li>
+						</ul>
+						<a class="morephone" href="#">更多<i></i></a>
+					</div>
+				</div>
+				<div class="oldphone">
+					<div class="old-left">
+						<p>如果你的机器型号有点儿老，在回收列表里找不到，说明他的价值很低，请进行环保回收！<a href="#">点击回收</a></p>
+					</div>
+					<div class="old-right">
+						<div class="sum">共<span>14</span>个商品</div>
+						<div class="num"><span>1</span>/1</div>
+						<div class="left-arrow"><</div>
+						<div class="right-arrow">></div>
+					</div>
+				</div>
+				<ul id="iphonelist">
+					<!--<li><img src="img/image1.jpg" /><div class="li-bot">苹果iPhone 7 Plus</div></li>-->
+				</ul>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="beni">
+				<div id="beni">
+					<div class="price">
+						<i></i>
+						<p>高价</p>
+						<span>百家竞价 价格公道</span>
+					</div>
+					<div class="price">
+						<i class="fast"></i>
+						<p>便捷</p>
+						<span>交易便利 节省时间</span>
+					</div>
+					<div class="price">
+						<i class="safe"></i>
+						<p>安全</p>
+						<span>放心回收 保障有我</span>
+					</div>
+					<div class="price">
+						<i class="inv"></i>
+						<p>环保</p>
+						<span>综合利用 避免污染</span>
+					</div>
+				</div>
+				<div class="otherlinks">
+					<div class="links_left">
+						<ul>
+							<li class="firstli">交易方式</li>
+							<li><a href="#">上海交易方式</a></li>
+							<li><a href="#">北京交易方式</a></li>
+							<li><a href="#">全国交易方式</a></li>
+						</ul>
+						<ul>
+							<li class="firstli">质检说明</li>
+							<li><a href="#">质检名词解释</a></li>
+							<li><a href="#">专业质检说明</a></li>
+						</ul>
+						<ul>
+							<li class="firstli">帮助中心</li>
+							<li><a href="#">常见问题</a></li>
+							<li><a href="#">服务条款</a></li>
+						</ul>
+						<ul>
+							<li class="firstli">关于我们</li>
+							<li><a href="#">了解我们</a></li>
+							<li><a href="#">加入我们</a></li>
+							<li><a href="#">加盟合作</a></li>
+							<li><a href="#">2016校园招聘</a></li>
+						</ul>
+						<ul>
+							<li class="firstli">合作伙伴</li>
+							<li><a href="#">京东</a></li>
+							<li><a href="#">大疆</a></li>
+						</ul>
+						<div class="app"><i></i>爱回收APP</div>
+						<div class="weixin"><i></i>微信公众号</div>
+					</div>
+					<div class="links_right">
+						<div class="phone_num">
+							<p>400-1616-365</p>
+							<span>周一至周日 9:00-21:00</span>
+						</div>
+						<div class="serve">在线客服</div>
+						<p class="p1">爱回收寄件地址：上海市宝山区纪蕴路588号1号楼6楼 唐生收</p>
+						<p class="p1">唐生收 021-55609898</p>
+						<a class="sendprice" href="#">快递费用说明</a>
+					</div>
+				</div>
+				<div class="friendlinks">
+					<div class="frlink">
+						<span>友情链接：</span>
+						<a href="#">百姓网</a>|
+						<a href="#">北京二手手机</a>|
+						<a href="#">北京二手手机回收</a>|
+						<a href="#">手机之家</a>
+					</div>
+					<div class="com">
+						<div class="icp"></div>
+						<div class="zhifubao"></div>
+						<div class="gongshang"></div>
+						<div class="cop"></div>
+						<div class="green"></div>
+					</div>
+					<p class="baoshan">宝山运营中心：上海市宝山区纪蕴路588号1号楼6楼 </p>
+					<p class="copy">Copyright 2010 - 2016 上海悦易网络信息技术有限公司     沪ICP备10043802号 - 2</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

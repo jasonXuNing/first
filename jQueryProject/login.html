@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>账号登录</title>
+		<link type="text/css" rel="stylesheet" href="css/login.css" />
+		
+		<script type="text/javascript" src="js/jquery-1.10.1.min.js" ></script>
+		<script type="text/javascript" src="js/jquery-1.7.1.js" ></script>
+		<script type="text/javascript" src="js/jquery.cookie.js" ></script>
+		<script type="text/javascript" src="js/login.js" ></script>
+	</head>
+	<body>
+		<div id="log-con">
+			<div id="log-logo"></div>
+			<div id="head">
+				<div class="hd-left">账号密码登录</div>
+				<div id="hd-log" class="hd-right"><a href="#">手机验证登录</a></div>
+			</div>
+			<div id="fm">
+				<input class="phone" type="text" id="phone" placeholder="手机号" />
+				<input type="password" id="pass" placeholder="密码" />
+				<a id="login">登录</a>
+				<div id="log-bot">
+					<div id="keep-log"></div>
+					<div class="keep-txt">10天内免登录</div>
+					<a id="foget" href="#">忘记密码？</a>
+				</div>
+			</div>
+			<div id="fm2">
+				<input class="phone phone1" type="text" id="phone2" placeholder="手机号" /><span id="span">获取验证码</span>
+				<span class="tishi">请输入正确的手机号！</span>
+				<input type="password" id="pass2" placeholder="短信验证码" />
+				<a id="login2">登录</a>
+				<p id="txt">未注册爱回收账号的手机号，登录时将自动创建爱回收账号</p>
+				
+			</div>
+		</div>
+		
+	</body>
+</html>

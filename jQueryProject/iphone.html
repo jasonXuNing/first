@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商品详情页</title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/iphone.css" />
+		<script type="text/javascript" src="js/jquery-1.7.1.js" ></script>
+		<script>
+			$(function(){
+				$(".know").hover(function(){
+					$(".hidep").css("display", "block");
+					$(this).find("i").css("background-position-x", "-28px");
+				},function(){
+					$(".hidep").css("display", "none");
+					$(this).find("i").css("background-position-x", "-3px");
+				})
+				
+				$(".contain").find("div").click(function(){
+					$(this).parent().find("h2").find(".result").html($(this).html()).css("display", "block");
+					$(this).parent().find("h2").find(".change").css("display", "block");
+					$(this).parent().find("div").css("display", "none");
+				})
+				$(".contain").find("h2").click(function(){
+					$(this).find(".result").css("display", "none");
+					$(this).find(".change").css("display", "none");
+					$(this).parent().find("div").css("display", "block");
+				})
+				
+				$(".feature").mouseenter(function(){
+					$(this).css("color", "#3782ff");
+				})
+				$(".feature").mouseleave(function(){
+					$(this).css("color", "#666");
+				})
+				
+				$(".feature").toggle(function(){
+					$(this).css("color", "#3782ff");
+					$(this).find("i").attr("class", "after");
+//					alert($(this).css("background-positionY"))
+				},function(){
+					$(this).css("color", "#666");
+					$(this).find("i").attr("class", "");
+				})
+			})
+			//放大镜
+			onload = function(){
+				var oS_box = document.getElementById("small");
+				var oS_position = oS_box.children[2];
+				var oS_mark = oS_box.children[0];
+				var oL_box = document.getElementById("large");
+				var oL_box_all = document.getElementById("large_box");
+				oS_mark.onmouseover = function(){
+					oS_position.style.display = "block";
+					oL_box.style.display = "block";
+				}
+				oS_mark.onmouseout = function(){
+					oS_position.style.display = "none";
+					oL_box.style.display = "none";
+				}
+				
+				oS_mark.onmousemove = function(evt){
+					var e = evt||window.event;
+					var left = e.offsetX - oS_position.offsetWidth/2;
+					if(left<0){
+						left=0;
+					}else if(left>oS_box.offsetWidth-oS_position.offsetWidth){
+						left = oS_box.offsetWidth-oS_position.offsetWidth;
+					}
+					oS_position.style.left = left + "px";
+					
+					var top = e.offsetY - oS_position.offsetHeight/2;
+					if(top<0){
+						top = 0;
+					}else if(top>oS_box.offsetHeight-oS_position.offsetHeight){
+						top = oS_box.offsetHeight - oS_position.offsetHeight;
+					}
+					
+					oS_position.style.top = top + "px";
+					
+					var proportionX = left/(oS_box.offsetWidth-oS_position.offsetWidth);
+					var proportionY = top/(oS_box.offsetHeight-oS_position.offsetHeight);
+					
+					oL_box_all.style.left = -proportionX*(oL_box_all.offsetWidth-oL_box.offsetWidth)+"px";
+					oL_box_all.style.top = -proportionY*(oL_box_all.offsetHeight-oL_box.offsetHeight)+"px";
+				}
+			}
+		</script>
+	</head>
+	<body style="background: #f8f8f8;">
+		<div class="top">
+			<div id="top">
+				<h1><a href="#"><img src="img/log-logo.jpg" alt="爱回收" /></a></h1>
+				<a href="#">旧机回收</a>
+				<a href="#">口袋优品</a>
+				<a href="#">手机快修</a>
+				<div class="search">
+					<input type="text" placeholder="请输入手机型号" class="typeofphone" />
+					<a href="#" class="asearch"></a>
+				</div>
+			</div>
+		</div>
+		<div class="mid">
+			<div class="walk">
+				<p><a href="#">首页</a>><a href="#">二手手机回收</a>><a href="#">二手苹果手机回收</a>>二手苹果手机iphone 7Plus 回收</p>
+			</div>
+		</div>
+		<div id="large">
+			<div id="large_box">
+				<img class="iphone-pic" src="img/image1.jpg" alt="iphone 7 Plus" />
+			</div>
+		</div>
+		<div class="con">
+			<div id="con">
+				<div class="con-left">
+					<div id="small">
+						<div class="mark_box"></div>
+						<img class="iphone-pic" src="img/image1.jpg" alt="iphone 7 Plus" />
+						<div class="position_box"></div>
+					</div>
+					
+					<h1>苹果 iPhone 7 Plus</h1>
+					<ul>
+						<li>1390<br/>历史回收次数</li>
+						<li>5832<br/>回收最高价/元</li>
+					</ul>
+					<a class="again" href="list.html" target="_blank">重选机型></a>
+					<div class="know">
+						<div class="know_title">苹果手机安全你知道吗？</div>
+						<p>苹果手机只要恢复出厂设置，是无须担心数据泄露风险的，请放心回收。<br/>这是真的！美国FBI都破解不了。</p>
+						<p class="hidep">1.苹果的磁盘是基于单个文件进行加密的，因此，在iPhone上所存储的每个文件都有单独随机生成的密钥进行加密。经过多层加密之后，文件才得以安全地存储在iPhone的磁盘上。</p>
+						<p class="hidep">2.用户抹掉数据以及所有设置之后，就等于抹掉了所有文件的密钥。如果要想恢复数据，就需要破解逐层加密。因此通过iPhone官方提供的抹掉数据和设置后被恢复的可能几乎为零。</p>
+						<p class="hidep">3.此前FBI也遇到了破解iPhone的难题。作为普通用户， iPhone的信息安全值得信赖。</p>
+						<i></i>
+					</div>
+					<div class="down">
+						<i></i>
+						<h3>建议您赶快出手</h3>
+						<p>预计下月跌幅<span>￥875</span></p>
+					</div>
+					<h4>季度跌幅近况</h4>
+					<img class="tiao" src="img/tiao.jpg" />
+				</div>
+				<div class="con-right">
+					<h1>基本信息</h1>
+					<div class="contain">
+						<h2><span>存储容量</span><span class="result"></span><a class="change">修改</a></h2>
+						<div>32G</div>
+						<div style="margin: 0 20px;">128G</div>
+						<div>256G</div>
+					</div>
+					<div class="contain contain2">
+						<h2><span>购买渠道</span><span class="result"></span><a class="change">修改</a></h2>
+						<div style="margin-right: 20px;">大陆国行（有“进网许可”标签）</div>
+						<div>香港行货（香港购买，全球联保）</div>
+						<div style="margin-right: 20px;">水货无锁（非国行港行，其它地区）</div>
+						<div>水货有锁（国外发行机型，需“卡贴”解锁后正常通话）</div>
+						<div style="margin-right: 20px; margin-bottom: 0;">国行官换机（系统型号N开头）</div>
+						<div style="margin: 0;">展示机</div>
+					</div>
+					<div class="contain">
+						<h2><span>机身颜色</span><span class="result"></span><a class="change">修改</a></h2>
+						<div style="margin: 0 20px 20px 0;">金色</div>
+						<div style="margin: 0 20px 20px 0;">白色</div>
+						<div  style="margin: 0 0 20px 0;">黑色</div>
+						<div style="margin: 0 20px 0 0;">粉色</div>
+						<div>亮黑色</div>
+					</div>
+					<h1>外观成色</h1>
+					<div class="contain contain2">
+						<h2><span>边框背板</span><span class="result"></span><a class="change">修改</a></h2>
+						<div style="margin-right: 20px;">全新机器</div>
+						<div style="margin-right: 0;">外壳完好</div>
+						<div style="margin: 0 20px 0 0;">外壳有划痕</div>
+						<div style="margin-bottom: 0;">外壳有磕碰/掉漆</div>
+					</div>
+					<div class="contain contain2">
+						<h2><span>屏幕外观</span><span class="result"></span><a class="change">修改</a></h2>
+						<div style="margin-right: 20px;">屏幕完好</div>
+						<div style="margin-right: 0;">屏幕有划痕</div>
+						<div style="margin-bottom: 0;">屏幕有缺角/碎裂</div>
+					</div>
+					<div class="contain contain2">
+						<h2><span>屏幕显示</span><span class="result"></span><a class="change">修改</a></h2>
+						<div style="margin-right: 20px;">屏幕正常显示</div>
+						<div style="margin-right: 0;">亮坏点/色差/轻微发黄</div>
+						<div style="margin: 0 20px 0 0;">色斑/漏液/错乱/严重老化</div>
+						<div style="margin-bottom: 0;">屏幕无法显示</div>
+					</div>
+					<div class="contain contain2">
+						<h2><span>维修拆机史</span><span class="result"></span><a class="change">修改</a></h2>
+						<div style="margin-right: 20px;">无拆机无维修</div>
+						<div style="margin-right: 0;">屏幕维修</div>
+						<div style="margin-bottom: 0;">主板维修/严重拆修</div>
+					</div>
+					<h1>功能性问题（可多选）<span class="if-no">（若无问题，点击“免费询价”）</span></h1>
+					<div class="feature charge"><i></i>充电不正常</div>
+					<div class="feature bend"><i></i>机身弯曲</div>
+					<div class="feature touch"><i></i>触摸功能不正常</div>
+					<div class="feature wifi"><i></i>无线不正常</div>
+					<div class="feature cantopen"><i></i>无线不正常</div>
+					<div class="feature cloud"><i></i>iCloud无法注销</div>
+					<div class="feature cantcall"><i></i>通话不正常</div>
+					<div class="feature zhiwen"><i></i>指纹功能不正常</div>
+					<div class="feature water"><i></i>机身进水或受潮</div>
+					<div class="free">
+						<div class="freeask">免费询价</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="otherlinks" style="background: #f8f8f8;">
+					<div class="links_left">
+						<ul>
+							<li class="firstli">交易方式</li>
+							<li><a href="#">上海交易方式</a></li>
+							<li><a href="#">北京交易方式</a></li>
+							<li><a href="#">全国交易方式</a></li>
+						</ul>
+						<ul>
+							<li class="firstli">质检说明</li>
+							<li><a href="#">质检名词解释</a></li>
+							<li><a href="#">专业质检说明</a></li>
+						</ul>
+						<ul>
+							<li class="firstli">帮助中心</li>
+							<li><a href="#">常见问题</a></li>
+							<li><a href="#">服务条款</a></li>
+						</ul>
+						<ul>
+							<li class="firstli">关于我们</li>
+							<li><a href="#">了解我们</a></li>
+							<li><a href="#">加入我们</a></li>
+							<li><a href="#">加盟合作</a></li>
+							<li><a href="#">2016校园招聘</a></li>
+						</ul>
+						<ul>
+							<li class="firstli">合作伙伴</li>
+							<li><a href="#">京东</a></li>
+							<li><a href="#">大疆</a></li>
+						</ul>
+						<div class="app"><i></i>爱回收APP</div>
+						<div class="weixin"><i></i>微信公众号</div>
+					</div>
+					<div class="links_right">
+						<div class="phone_num">
+							<p>400-1616-365</p>
+							<span>周一至周日 9:00-21:00</span>
+						</div>
+						<div class="serve">在线客服</div>
+						<p class="p1">爱回收寄件地址：上海市宝山区纪蕴路588号1号楼6楼 唐生收</p>
+						<p class="p1">唐生收 021-55609898</p>
+						<a class="sendprice" href="#">快递费用说明</a>
+					</div>
+				</div>
+				<div class="friendlinks" style="background: #f8f8f8;">
+					<div class="frlink">
+						<span>友情链接：</span>
+						<a href="#">百姓网</a>|
+						<a href="#">北京二手手机</a>|
+						<a href="#">北京二手手机回收</a>|
+						<a href="#">手机之家</a>
+					</div>
+					<div class="com">
+						<div class="icp"></div>
+						<div class="zhifubao"></div>
+						<div class="gongshang"></div>
+						<div class="cop"></div>
+						<div class="green"></div>
+					</div>
+					<p class="baoshan">宝山运营中心：上海市宝山区纪蕴路588号1号楼6楼 </p>
+					<p class="copy">Copyright 2010 - 2016 上海悦易网络信息技术有限公司     沪ICP备10043802号 - 2</p>
+				</div>
+			
+	</body>
+</html>

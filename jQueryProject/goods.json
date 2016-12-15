@@ -1,0 +1,11 @@
+[	{"id":0,"img":"img/iphone6.jpg","name":"iphone6 Plus","price":"￥2960","up":"140"},
+	{"id":1,"img":"img/mi4.jpg","name":"小米手机4","price":"￥450","up":"175"},
+	{"id":2,"img":"img/honer7.jpg","name":"华为  荣耀7","price":"￥1000","up":"150"},
+	{"id":3,"img":"img/galaxys7.jpg","name":"三星 Galaxy S7 edge","price":"￥2500","up":"300"},
+	{"id":4,"img":"img/m4s.jpg","name":"美图  M4s","price":"￥1000","up":"300"},
+	{"id":5,"img":"img/iwatch.jpg","name":"Apple Watch Sport","price":"￥1000","up":"150"},
+	{"id":6,"img":"img/ipadmin.jpg","name":"iPad Mini","price":"￥800","up":"300"},
+	{"id":7,"img":"img/macbook.jpg","name":"苹果15年 13寸 MacBook Air","price":"￥5400","up":"200"},
+	{"id":8,"img":"img/lenovo.jpg","name":"联想Y470","price":"￥2960","up":"150"},
+	{"id":9,"img":"img/ganon.jpg","name":"佳能 EF-S 18-55mm f/3.5-5.6","price":"￥2960","up":"200"}
+]

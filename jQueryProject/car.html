@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/buttons.css" />
+		<script type="text/javascript" src="js/jquery-1.7.1.js" ></script>
+		<script type="text/javascript" src="js/jquery.cookie.js" ></script>
+		<script type="text/javascript" src="js/index.js" ></script>
+		<script>
+			$(function(){
+				if($.cookie("goods")){
+					var num1 = eval($.cookie("goods")).length
+					$(".number1").html(num1);
+				}
+//				$(".clear_car").click(function(){
+//					$(".goods_detail").hide();
+//					$(".pay_all").html("￥0");
+//					$.cookie("goods", "");
+//				})
+				
+				if($.cookie("phone1")){
+					var str1 = $.cookie("phone1").substr(0, 3);
+					var str2 = $.cookie("phone1").substr(7, 4);
+					var newStr1 = str1 + "****" +str2;
+					$(".log_name").find("span").text(newStr1).css("color", "#fd683b");
+					
+				}
+				if($.cookie("phone2")){
+					var str3 = $.cookie("phone2").substr(0, 3);
+					var str4 = $.cookie("phone2").substr(7, 4);
+					var newStr2 = str3 + "****" +str4;
+					$(".log_name").find("span").text(newStr2).css("color", "#fd683b");
+					
+				}
+			})
+		</script>
+	</head>
+	<body style="background: #fff;">
+		<div class="top-nav">
+			<div id="top-nav">
+				<div id="hover">上海
+					<div id="arrow"></div>
+					<div id="address">
+						<span class="hotcity">热门城市：</span>
+						<ul class="city-list">
+							<li><a href="#">上海</a></li>
+							<li><a href="#">北京</a></li>
+							<li><a href="#">成都</a></li>
+							<li><a href="#">重庆</a></li>
+							<li><a href="#">东莞</a></li>
+							<li><a href="#">福州</a></li>
+							<li><a href="#">佛山</a></li>
+							<li><a href="#">广州</a></li>
+							<li><a href="#">杭州</a></li>
+							<li><a href="#">南京</a></li>
+							<li><a href="#">宁波</a></li>
+							<li><a href="#">深圳</a></li>
+							<li><a href="#">苏州</a></li>
+							<li><a href="#">天津</a></li>
+							<li><a href="#">无锡</a></li>
+							<li><a href="#">武汉</a></li>
+						</ul>
+						<ul class="word">
+							<li class="is-select">A</li>
+							<li >B</li>
+							<li >C</li>
+							<li >D</li>
+							<li >E</li>
+							<li >F</li>
+							<li >G</li>
+							<li >H</li>
+							<li >J</li>
+							<li >K</li>
+							<li >L</li>
+							<li >M</li>
+							<li >N</li>
+							<li >P</li>
+							<li >Q</li>
+							<li >R</li>
+							<li >S</li>
+							<li >T</li>
+							<li >W</li>
+							<li >X</li>
+							<li >Y</li>
+							<li >Z</li>
+						</ul>
+						<ul class="a-city">
+							<li>鞍山</li>
+							<li>安阳</li>
+							<li>鞍山</li>
+							<li>安阳</li>
+							<li>鞍山</li>
+							<li>阿泰尔地区</li>
+							<li>鞍山</li>
+							<li>安阳</li>
+							<li>鞍山</li>
+							<li>安阳</li>
+							<li>鞍山</li>
+							<li>安阳</li>							
+						</ul>
+					</div>
+				</div>
+				<ul class="nav-list">
+					<li class="login"><a class="log_name" href="#"><i></i><span>登录</span></a></li>
+					<li class="car"><a href="#"><i></i>回收车<span class="number1" style="color: #fd683b;">0</span>件<b></b></a><div class="car-con">
+						<div class="car-top">
+						<ul class="car_con">
+							<!--<li><div class="min_img"><img src="img/mi4.jpg"/></div><span class="phone_name">小米</span><span class="phone_price">100元</span></li>-->
+						</ul>
+						</div>
+						<div class="joincar">
+							<p class="car_p"><span >共<span class="number1">0</span>件商品</span><br /><span class="price_all">0</span><span class="yuan">元</span></p>
+							<div class="join_btn">去回收车结算</div>
+						</div>
+					</div></li>
+					<li class="school"><a href="#">2016校园招聘</a></li>
+					<li class="about" style="width: 71px; padding-left:14px;"><a style="color: #fd683b;" href="#">关于我们</a></li>
+					<li class="secure" style="width: 59px; padding-left:14px;"><a style="color: #fd683b;" href="#">安全保</a></li>
+					<li class="school" style="width: 83px;"><a href="#">数码服务站</a></li>
+					<li class="company"><a href="#">企业回收<b></b></a></li>
+					<li class="school" style="width: 72px;"><a href="#">帮助中心</a></li>
+					<li class="company"><a href="#">网站导航<b></b></a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="top-area">
+			<div id="top-area">
+				<div class="area-top">
+					<div class="area-left">
+						<h1 style="width: 170px; margin: 0;"><a href="#"><img src="img/log-logo.jpg" alt="爱回收,回收手机、平板、笔记本。" title="爱回收"/></a></h1>
+						<div class="backup"></div>
+					</div>
+					<div class="search">
+						<input type="text" placeholder="请输入手机型号" class="typeofphone" />
+						<a href="#" class="asearch"></a>
+					</div>
+				</div>
+				<div class="area-bottom">
+					<ul class="area-bot-list">
+						<li class="yellow"><a href="#">旧机回收</a></li>
+						<li><a href="#">口袋优品</a></li>
+						<li><a href="#">手机快修</a></li>
+					</ul>
+					<div class="two-wei">
+						<i class="ma"></i>
+						爱回收APP
+					</div>
+					
+				</div>
+				
+			</div>
+		</div>
+		
+		<div class="car-nei">
+			<div class="goods_incar">
+				<div class="incar1">回收车中的商品</div>
+				<div class="moreprice">商家最高价</div>
+				<div class="price_tai">价格状态</div>
+				<div class="reuse_num">回收数量</div>
+				<div class="money_count">金额小计</div>
+				<div class="play">操作</div>
+			</div>
+			<ul class="goods_detail">
+				<!--<li><div class="detail_img"><img src="img/galaxys7.jpg"/></div><p class="detail_name">小米4</p><span class="detail_price">￥100</span><div class="has_xiao">价格有效</div><div class="detail_num">1</div><b class="detail_money">￥100</b><div class="cao"><a>删除</a><br/><a>重新询价</a></div></li>-->
+			</ul>
+			<div class="clear_car">清空回收车</div>
+			<div class="pay">
+				<p>合计：<span class="pay_all">￥0</span></p>
+				<div class="go_on">继续回收</div>
+				<div class="go_pay">去结算</div>
+			</div>
+		</div>
+		
+		<div style="width: 100%; background: #fafafa;">
+		<div class="otherlinks" style="background: #fafafa;">
+					<div class="links_left">
+						<ul>
+							<li class="firstli">交易方式</li>
+							<li><a href="#">上海交易方式</a></li>
+							<li><a href="#">北京交易方式</a></li>
+							<li><a href="#">全国交易方式</a></li>
+						</ul>
+						<ul>
+							<li class="firstli">质检说明</li>
+							<li><a href="#">质检名词解释</a></li>
+							<li><a href="#">专业质检说明</a></li>
+						</ul>
+						<ul>
+							<li class="firstli">帮助中心</li>
+							<li><a href="#">常见问题</a></li>
+							<li><a href="#">服务条款</a></li>
+						</ul>
+						<ul>
+							<li class="firstli">关于我们</li>
+							<li><a href="#">了解我们</a></li>
+							<li><a href="#">加入我们</a></li>
+							<li><a href="#">加盟合作</a></li>
+							<li><a href="#">2016校园招聘</a></li>
+						</ul>
+						<ul>
+							<li class="firstli">合作伙伴</li>
+							<li><a href="#">京东</a></li>
+							<li><a href="#">大疆</a></li>
+						</ul>
+						<div class="app"><i></i>爱回收APP</div>
+						<div class="weixin"><i></i>微信公众号</div>
+					</div>
+					<div class="links_right">
+						<div class="phone_num">
+							<p>400-1616-365</p>
+							<span>周一至周日 9:00-21:00</span>
+						</div>
+						<div class="serve">在线客服</div>
+						<p class="p1">爱回收寄件地址：上海市宝山区纪蕴路588号1号楼6楼 唐生收</p>
+						<p class="p1">唐生收 021-55609898</p>
+						<a class="sendprice" href="#">快递费用说明</a>
+					</div>
+				</div>
+				<div class="friendlinks">
+					<div class="frlink">
+						<span>友情链接：</span>
+						<a href="#">百姓网</a>|
+						<a href="#">北京二手手机</a>|
+						<a href="#">北京二手手机回收</a>|
+						<a href="#">手机之家</a>
+					</div>
+					<div class="com">
+						<div class="icp"></div>
+						<div class="zhifubao"></div>
+						<div class="gongshang"></div>
+						<div class="cop"></div>
+						<div class="green"></div>
+					</div>
+					<p class="baoshan">宝山运营中心：上海市宝山区纪蕴路588号1号楼6楼 </p>
+					<p class="copy">Copyright 2010 - 2016 上海悦易网络信息技术有限公司     沪ICP备10043802号 - 2</p>
+				</div>
+				</div>
+	</body>
+</html>

@@ -1,0 +1,39 @@
+[
+    {
+        "bra0": "苹果",
+        "bra1": "iPad Mini2",
+        "bra2": "iPad 2代",
+        "bra3": "iPad Mini",
+        "bra4": "iPad Air2",
+        "bra5": "iPad Air"
+    },
+    {
+        "bra0": "三星",
+        "bra1": "三星 Galaxy Tab S T705C(4G版)",
+        "bra2": "三星  N8000"
+    },
+    {
+        "bra0": "小米",
+        "bra1": "小米平板",
+        "bra2": "小米平板2"
+    },
+    {
+        "bra0": "华为",
+        "bra1": "华为 荣耀X2",
+        "bra2": "华为 荣耀X1",
+        "bra3": "华为 M2",
+        "bra4": "华为MediaPad 10 Link"
+    },
+    {
+        "bra0": "微软",
+        "bra1": "微软surface pro3",
+        "bra2": "微软surface pro3(裸机)",
+        "bra3": "微软surface 3"
+    },
+    {
+        "bra0": "诺基亚",
+        "bra1": "诺基亚 N1",
+        "bra2": "诺基亚Lumia 2520",
+        "bra3": "诺基亚Lumia Tablet"
+    }
+]
